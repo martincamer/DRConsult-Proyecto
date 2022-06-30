@@ -1,0 +1,63 @@
+@mixin grid-one {
+	display: grid;
+	grid-template-columns: repeat(2, 6fr);
+	grid-template-rows: auto;
+}
+
+@mixin flex-row-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+@mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+@mixin flex-column-center-dos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 100px;
+}
+@mixin flex-row-space-around {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	gap: 30px;
+}
+
+@mixin flex-row-space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+@mixin media-queries-grid-uno {
+	@media screen and (max-width: 1200px) {
+		grid-template-columns: repeat(2, 6fr);
+		grid-auto-rows: auto;
+	}
+
+	@media screen and (max-width: 900px) {
+		grid-template-columns: repeat(1, 6fr);
+		grid-auto-rows: auto;
+	}
+
+	@media screen and (max-width: 411px) {
+		grid-template-columns: repeat(1, 6fr);
+		grid-auto-rows: auto;
+	}
+}

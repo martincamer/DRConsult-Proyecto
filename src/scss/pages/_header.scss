@@ -1,0 +1,179 @@
+@import '../components/mixins';
+@import '../components/variables';
+
+.nav {
+	padding: $padding-header;
+	background-color: rgba(167, 167, 167, 0.514);
+}
+
+.nav-uno {
+	@include flex-row-space-around;
+	display: flex;
+	padding: 0px 50px;
+}
+
+.nav-dos {
+	ul {
+		display: flex;
+		gap: 50px;
+	}
+	li a {
+		color: $color-negro;
+		font-weight: 500;
+	}
+
+	li a:hover {
+		color: $color-red;
+		transition: all ease 0.8s;
+	}
+}
+
+.nav-register {
+	display: flex;
+	gap: 50px;
+}
+
+.nav-register a {
+	color: $color-blanco;
+	background-color: $color-red;
+	padding: 12px 28px;
+	border-radius: 30px;
+	&:hover {
+		background-color: $color-negro;
+		color: $color-blanco;
+		transition: all ease 0.8s;
+		box-shadow: 5px 5px 0px 0px $color-red;
+	}
+}
+
+.navigation-menu {
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	background-color: rgb(231, 231, 231);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 1;
+}
+
+.navigation-menu ul {
+	display: flex;
+	gap: 40px;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+
+.navigation-menu ul li a {
+	color: $color-red;
+	font-size: 28px;
+	padding: 30px 0px;
+	font-weight: 700;
+	display: block;
+	&:hover {
+		background-color: $color-blanco;
+		width: 100%;
+		transition: all ease 0.8s;
+	}
+}
+
+.button {
+	display: none;
+}
+
+.navigation-menu {
+	animation: animation 5s ease;
+	display: none;
+}
+
+.noclick {
+	display: none;
+}
+
+@keyframes animation {
+	0% {
+		transform: translateX(-200px);
+	}
+
+	20% {
+		transform: translateX(0px);
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.navigation-menu {
+		display: none;
+	}
+	.nav-register {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.nav-uno {
+		justify-content: space-between;
+		padding: 0px 3px;
+	}
+	.nav-dos {
+		display: none;
+	}
+	.navigation-menu {
+		display: block;
+	}
+
+	.button {
+		display: block;
+		font-size: 32px;
+	}
+
+	.noclick {
+		display: none;
+	}
+	.nav-register-dos {
+		align-items: center;
+		height: 20vh;
+		gap: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.nav-register-dos a {
+		color: $color-blanco;
+		background-color: $color-red;
+		padding: 12px 28px;
+		border-radius: 30px;
+		&:hover {
+			background-color: $color-negro;
+			color: $color-blanco;
+			transition: all ease 0.8s;
+			box-shadow: 5px 5px 0px 0px $color-red;
+		}
+	}
+
+	.hover {
+		transition: all 0.9s ease;
+		background-color: $color-red;
+		border-radius: 2px;
+		color: $color-blanco;
+		padding: 3px 3px;
+		width: 3rem;
+		height: 2.5rem;
+		cursor: pointer;
+		&:hover {
+			transition: all ease 0.2s;
+			background-color: $color-blanco;
+			color: $color-red;
+		}
+	}
+}
+
+@media screen and (max-width: 722px) {
+	.nav-register {
+		display: none;
+	}
+}

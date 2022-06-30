@@ -1,0 +1,55 @@
+@import '../components/_variables.scss';
+@import '../components/_mixins.scss';
+.section-tree {
+	background-color: $color-red;
+	padding: 30px 0px;
+	height: 100%;
+	max-height: 100%;
+	@include flex-column-center;
+}
+
+.grid {
+	@include flex-row-space-around;
+	padding: 0px 30px;
+}
+
+.itemTwoImg {
+	width: 100px;
+	height: 100px;
+}
+
+.itemTitleTwo {
+	font-size: 28px;
+	font-weight: 700;
+	color: $color-red;
+	background-color: $color-blanco;
+	padding: 5px 50px;
+	width: 100%;
+	border-radius: 2px;
+	box-shadow: 5px 5px 5px 0px rgb(121, 121, 121);
+}
+
+.itemParrafoTwo {
+	color: $color-blanco;
+	font-size: 18px;
+	padding: 5px 5px;
+	border-radius: 2px;
+	width: 100%;
+	background-color: $color-red;
+	line-height: 30px;
+	box-shadow: 5px 5px 5px 0px rgb(121, 121, 121);
+}
+
+.title__tree {
+	border-bottom: solid 6px $color-blanco;
+}
+.title__tree p {
+	font-size: 36px;
+	font-weight: 700;
+	color: $color-blanco;
+}
+
+.title__tree p span {
+	font-size: 54px;
+	font-style: oblique;
+}

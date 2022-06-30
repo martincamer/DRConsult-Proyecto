@@ -1,0 +1,47 @@
+@import '../components/_variables.scss';
+@import '../components/_mixins.scss';
+
+.section {
+	@include flex-column-center-dos;
+	padding: 50px 20px;
+}
+
+.section .title {
+	font-size: 32px;
+	font-weight: 700;
+	color: $color-red;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.title p {
+	border-bottom: 4px solid;
+}
+
+.grid {
+	padding: 0px 40px;
+	@include flex-row-space-around;
+	@media screen and (max-width: 940px) {
+		&.grid {
+			gap: 100px;
+		}
+	}
+}
+
+.grid {
+	.grid-one {
+		padding: 10px 5px;
+	}
+
+	.grid-two {
+		padding: 10px 5px;
+	}
+}
+
+.grid-one img {
+	width: 100%;
+}
+
+.grid-two img {
+	width: 100%;
+}

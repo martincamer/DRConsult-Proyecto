@@ -1,0 +1,46 @@
+@import '../components/_variables.scss';
+
+.intro__title {
+	color: $color-blanco;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 60px;
+}
+
+.intro__subtitle {
+	color: $color-blanco;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 60px;
+}
+
+.button_scale {
+	max-width: 100%;
+	border: none;
+}
+
+.button_scale:hover {
+	transform: scale(1.08);
+	transition: all ease 0.8s;
+	box-shadow: 20px 20px 18px 0px $color-negro;
+	border-radius: 30px;
+}
+
+.button__flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+@media screen and (max-width: 722px) {
+	.button__flex {
+		flex-direction: column;
+		align-items: initial;
+	}
+
+	.button_scale {
+		width: 100%;
+	}
+}
